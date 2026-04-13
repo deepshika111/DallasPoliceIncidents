@@ -1,0 +1,19 @@
+{
+  "name": "Dallas Crime Intelligence",
+  "dataColors": ["#1f4e79", "#c62828", "#f39c12", "#2f7d32", "#6d4c41", "#546e7a"],
+  "background": "#f7f4ef",
+  "foreground": "#1f2933",
+  "tableAccent": "#c62828",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "fontFamily": "Georgia",
+            "color": { "solid": { "color": "#1f2933" } }
+          }
+        ]
+      }
+    }
+  }
+}

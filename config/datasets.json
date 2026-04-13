@@ -1,0 +1,41 @@
+{
+  "datasets": {
+    "active_calls": {
+      "enabled": true,
+      "kind": "json_api",
+      "description": "Dallas Police Active Calls",
+      "url": "https://www.dallasopendata.com/resource/9fxf-t2tr.json?$limit=50000",
+      "output": "data/raw/Active_Calls.json"
+    },
+    "zip_demographics_acs": {
+      "enabled": true,
+      "kind": "json_api",
+      "description": "US Census ACS 2024 5-Year ZIP Code demographics",
+      "url": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B01002_001E,B01003_001E,B19013_001E,B17001_001E,B17001_002E,B23025_003E,B23025_005E,B15003_001E,B15003_022E,B15003_023E,B15003_024E,B15003_025E&for=zip%20code%20tabulation%20area:*",
+      "output": "data/raw/ZIP_Demographics_ACS_2024.json"
+    },
+    "police_incidents": {
+      "enabled": true,
+      "kind": "socrata_snapshot_csv",
+      "description": "Dallas Police Incidents",
+      "url": "https://www.dallasopendata.com/api/views/qv6i-rri7/rows.csv?accessType=DOWNLOAD&api_foundry=true",
+      "output": "data/raw/Police_Incidents.csv"
+    },
+    "police_beats": {
+      "enabled": true,
+      "kind": "arcgis_geojson",
+      "description": "Dallas Police Beats",
+      "service_url": "https://gis.dallascityhall.com/arcgis/rest/services/Crm_public/CrmLayers/MapServer/14/query",
+      "where": "1=1",
+      "batch_size": 2000,
+      "output": "data/raw/Police_Beats.geojson"
+    },
+    "neighborhood_demographics": {
+      "enabled": false,
+      "kind": "manual_config_required",
+      "description": "Neighborhood demographics / socioeconomic data",
+      "output": "data/raw/Neighborhood_Demographics.csv",
+      "notes": "Add the exact official endpoint here after you confirm the source. If Dallas OpenData does not have the right neighborhood-level dataset, the Census API is the clean fallback."
+    }
+  }
+}

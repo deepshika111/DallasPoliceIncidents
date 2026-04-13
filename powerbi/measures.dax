@@ -1,0 +1,15 @@
+Total Incidents = SUM(division_stats[total_crimes])
+
+Average Risk Score = AVERAGE(division_stats[risk_score])
+
+Violent Crime Rate = AVERAGE(division_stats[violent_rate])
+
+Nighttime Crime Rate = AVERAGE(division_stats[nighttime_rate])
+
+Active Calls = COUNTROWS(active_calls_latest)
+
+Priority 1 Calls =
+CALCULATE(
+    COUNTROWS(active_calls_latest),
+    active_calls_latest[priority] = 1
+)

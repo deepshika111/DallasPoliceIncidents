@@ -5,3 +5,5 @@ seaborn
 streamlit
 plotly
 openpyxl
+powerbi 
+SQL
